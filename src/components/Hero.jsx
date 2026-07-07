@@ -10,12 +10,12 @@ const Hero = () => {
                 
                 <div className="hero-image">
                     <img 
-                        src="https://images.unsplash.com/photo-1581091226825-a6a035833c9c?w=800" 
+                        src="src\assets\viveimprenta.jpg" 
                         alt="Impresión de Lona" 
                     />
                     {/* Opcional: overlay de efecto impresión */}
                     <div className="printing-overlay">
-                        <span>🖨️ IMPRIMIENDO...</span>
+                        <span> IMPRIMIENDO...</span>
                     </div>
                 </div>
             </div>

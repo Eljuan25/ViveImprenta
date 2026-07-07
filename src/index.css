@@ -298,14 +298,14 @@ h2 {
 
 /* ====================== FOOTER ====================== */
 .footer {
-    background: #0f2b4a;
-    color: white;
-    padding: 80px 0 30px;
+    background: #0f1f38;
+    color: #ccc;
+    padding: 80px 0 40px;
 }
 
 .footer-content {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1.5fr 1fr;
     gap: 40px;
     margin-bottom: 50px;
 }
@@ -313,7 +313,7 @@ h2 {
 .footer-logo h2 {
     color: white;
     font-size: 28px;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
 }
 
 .footer-logo span {
@@ -321,49 +321,118 @@ h2 {
 }
 
 .footer-logo p {
-    opacity: 0.8;
-    line-height: 1.6;
+    color: #aaa;
 }
 
-.footer-links h3,
-.footer-contact h3,
-.footer-social h3 {
-    color: #1694e8;
+h3 {
+    color: white;
     margin-bottom: 20px;
     font-size: 1.3rem;
 }
 
 .footer-links a,
-.footer-contact p {
-    display: block;
+.footer-contact a,
+.footer-social a {
     color: #ccc;
     text-decoration: none;
+    display: block;
     margin-bottom: 10px;
     transition: 0.3s;
 }
 
-.footer-links a:hover {
-    color: white;
+.footer-links a:hover,
+.footer-contact a:hover,
+.footer-social a:hover {
+    color: #1694e8;
     padding-left: 5px;
 }
 
-.social-icons a {
-    font-size: 1.8rem;
-    margin-right: 15px;
-    transition: 0.3s;
+/* Botón flotante WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 62px;
+    height: 62px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.5);
+    z-index: 1000;
+    transition: all 0.3s;
 }
 
-.social-icons a:hover {
-    color: #1694e8;
-    transform: scale(1.2);
+.whatsapp-float:hover {
+    transform: scale(1.12);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
 }
 
 .footer-bottom {
-    border-top: 1px solid #1e4a7a;
-    padding-top: 20px;
     text-align: center;
-    opacity: 0.8;
-    font-size: 0.95rem;
+    padding-top: 30px;
+    border-top: 1px solid #1e2d4a;
+    color: #777;
+}
+
+
+.footer-contact p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.footer-contact i {
+    width: 20px;
+    color: #1694e8;
+}
+
+.whatsapp-link i {
+    color: #25D366;
+}
+
+.instagram-link i {
+    color: #E1306C;
+}
+
+/* Botón flotante */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 65px;
+    height: 65px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+    z-index: 1000;
+    transition: all 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.15);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer-logo {
+        grid-column: span 2;
+    }
 }
 
 /* Responsive Footer */
@@ -556,4 +625,40 @@ h2 {
     font-weight: bold;
     text-align: center;
     border-top: 1px solid #eee;
+}
+
+/* ====================== WHATSAPP FLOTANTE ====================== */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.15);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.5);
+}
+
+/* Responsive WhatsApp */
+@media (max-width: 480px) {
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+        font-size: 26px;
+    }
 }
