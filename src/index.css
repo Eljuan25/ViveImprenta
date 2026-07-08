@@ -27,7 +27,7 @@
 
 .menu {
     display: flex;
-    gap: 40px;
+    gap: 35px;
 }
 
 .menu a {
@@ -42,7 +42,6 @@
     color: #1694e8;
 }
 
-/* Botón Cotizar */
 .btn-cotizar {
     background: #1694e8;
     color: white;
@@ -52,7 +51,6 @@
     cursor: pointer;
     font-weight: bold;
     transition: all 0.3s;
-    font-size: 16px;
 }
 
 .btn-cotizar:hover {
@@ -60,7 +58,7 @@
     transform: translateY(-2px);
 }
 
-/* Menú hamburguesa (móvil) */
+/* Botón menú hamburguesa */
 .menu-toggle {
     display: none;
     background: none;
@@ -68,9 +66,10 @@
     font-size: 28px;
     color: #1694e8;
     cursor: pointer;
+    padding: 5px;
 }
 
-/* Responsive */
+/* ==================== RESPONSIVE ==================== */
 @media (max-width: 768px) {
     .header {
         padding: 15px 20px;
@@ -78,17 +77,18 @@
 
     .menu {
         position: fixed;
-        top: 70px;
+        top: 75px;
         left: -100%;
         width: 100%;
-        height: calc(100vh - 70px);
+        height: calc(100vh - 75px);
         background: white;
         flex-direction: column;
         align-items: center;
-        justify-content: start;
+        justify-content: flex-start;
         padding-top: 50px;
-        transition: 0.4s;
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        transition: 0.4s ease;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        z-index: 99;
     }
 
     .menu.active {
@@ -96,15 +96,18 @@
     }
 
     .menu a {
-        font-size: 20px;
+        font-size: 1.4rem;
         margin: 15px 0;
     }
 
     .menu-toggle {
         display: block;
     }
-}
 
+    .btn-cotizar {
+        display: none; /* Ocultamos en móvil porque está en el menú */
+    }
+}
 /* ====================== RESET BÁSICO ====================== */
 * {
     margin: 0;
@@ -224,7 +227,7 @@ h2:after {
 }
 
 .hero .btn-cotizar {
-    padding: 16px 32px;
+    padding: 10px 20px;
     font-size: 1.3rem;
     background: white;
     color: #1694e8;
@@ -660,5 +663,341 @@ h3 {
         width: 55px;
         height: 55px;
         font-size: 26px;
+    }
+}
+
+
+/* ====================== RESPONSIVE GENERAL ====================== */
+
+/* Tablets y móviles */
+@media (max-width: 1024px) {
+    .header {
+        padding: 15px 20px;
+    }
+    
+    .menu {
+        gap: 20px;
+    }
+}
+
+/* Móviles grandes */
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.8rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer-logo {
+        grid-column: span 2;
+        text-align: center;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    .header {
+        padding: 12px 15px;
+    }
+    
+    .logo h2 {
+        font-size: 24px;
+    }
+    
+    .hero {
+        padding: 60px 15px 50px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.4rem;
+    }
+    
+    .hero-text p {
+        font-size: 1.1rem;
+    }
+    
+    .chat-container,
+    .service-card {
+        margin: 0 10px;
+    }
+    
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 58px;
+        height: 58px;
+        font-size: 26px;
+    }
+}
+
+/* Ajustes para el menú hamburguesa */
+@media (max-width: 768px) {
+    .menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+        transition: 0.4s ease;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        z-index: 99;
+    }
+    
+    .menu.active {
+        left: 0;
+    }
+    
+    .menu a {
+        font-size: 1.3rem;
+        padding: 12px 0;
+    }
+}
+/* ==================== BOTÓN EN HERO ==================== */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.btn-about-hero {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.05rem;
+}
+
+.btn-about-hero:hover {
+    background: white;
+    color: #ff6b00;
+    transform: translateY(-3px);
+}
+
+/* ==================== PÁGINA QUIÉNES SOMOS ==================== */
+.about-page {
+    padding: 100px 20px 80px;
+    background: #f8f9fa;
+    min-height: 100vh;
+}
+
+.about-page .container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.btn-back {
+    background: #ff6b00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.btn-back:hover {
+    background: #e55a00;
+}
+
+.about-page h1 {
+    text-align: center;
+    color: #ff6b00;
+    font-size: 3rem;
+    margin-bottom: 50px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.about-location {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-top: 30px;
+}
+
+.about-location h3 {
+    color: #ff6b00;
+    margin-bottom: 15px;
+}
+
+.btn-maps {
+    background: #ff6b00;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-maps:hover {
+    background: #e55a00;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* ==================== ABOUT PAGE - AZUL ==================== */
+.about-page {
+    padding: 100px 20px 120px;
+    background: #f0f4f8;
+    min-height: 100vh;
+}
+
+.about-header h1 {
+    text-align: center;
+    color: #1e40af;
+    font-size: 3rem;
+    margin-bottom: 12px;
+}
+
+.about-subtitle {
+    text-align: center;
+    color: #3b82f6;
+    font-size: 1.35rem;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.85;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+.about-features {
+    list-style: none;
+    padding: 0;
+}
+
+.about-features li {
+    padding: 10px 0;
+    font-size: 1.1rem;
+    color: #1e3a8a;
+}
+
+.about-features i {
+    color: #3b82f6;
+    margin-right: 12px;
+    width: 20px;
+}
+
+.about-mission {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 30px;
+    border-left: 6px solid #3b82f6;
+}
+
+.about-mission h3 {
+    color: #1e40af;
+    margin-bottom: 12px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+}
+
+.about-location {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 600px;
+    margin: 70px auto 0;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.about-location h2 {
+    color: #1e40af;
+    margin-bottom: 15px;
+}
+
+.btn-back, .btn-maps {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-back:hover, .btn-maps:hover {
+    background: #1e40af;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
     }
 }

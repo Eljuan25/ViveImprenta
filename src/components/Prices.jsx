@@ -1,8 +1,11 @@
+
+
+
 const Services = () => {
     return (
-        <section id="servicios" className="services">
+        <section id="precios" className="precios">
             <div className="container">
-                <h2>Nuestros Servicios y Precios</h2>
+                <h2>Nuestros  Precios</h2>
                 <p className="services-subtitle">Consulta rápida de precios actualizados</p>
 
                 <div className="chat-container">
