@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import  about from "../assets/viveimprenttta.jpg"
 
 
 const About = () => {
@@ -44,7 +45,7 @@ const About = () => {
 
                     <div className="about-image">
                         <img 
-                            src="src/assets/viveimprenttta.jpg" 
+                            src={about} 
                             alt="Vive Imprenta" 
                         />
                     </div>

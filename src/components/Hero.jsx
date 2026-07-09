@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import viveImprenta from "../assets/viveimprenta.jpg"
 
 const Hero = () => {
     const navigate = useNavigate();
@@ -35,7 +36,7 @@ const Hero = () => {
                 
                 <div className="hero-image">
                     <img 
-                        src="src\assets\viveimprenta.jpg" 
+                        src={viveImprenta} alt="viveimprenta" 
                         alt="Impresión de Lona" 
                     />
                     <div className="printing-overlay">
